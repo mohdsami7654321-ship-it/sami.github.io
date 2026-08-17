@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Sami Mohammed — MIS Analyst and Data Analyst portfolio. Everest Fleet operations, Power BI, SQL, Excel and Python projects.">
+<title>Sami Mohammed | MIS Analyst & Data Analyst</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#07111f;--panel:#0d1a2b;--panel2:#101f33;--text:#eef5ff;--muted:#9db0c7;--line:#1c3048;--accent:#55d6be;--accent2:#5ea7ff}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,Arial,sans-serif;background:radial-gradient(circle at 80% 5%,#123355 0,transparent 28%),var(--bg);color:var(--text);line-height:1.6}
+a{color:inherit;text-decoration:none}
+.container{width:min(1120px,92%);margin:auto}
+nav{position:sticky;top:0;z-index:10;background:rgba(7,17,31,.82);backdrop-filter:blur(16px);border-bottom:1px solid rgba(255,255,255,.06)}
+.nav{height:72px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-weight:800;font-size:20px}.logo span{color:var(--accent)}
+.navlinks{display:flex;gap:26px;color:var(--muted);font-size:14px}.navlinks a:hover{color:white}
+.hero{min-height:680px;display:grid;grid-template-columns:1.1fr .9fr;gap:55px;align-items:center;padding:80px 0}
+.badge{display:inline-flex;gap:8px;align-items:center;border:1px solid #21405e;background:#0b1c30;border-radius:999px;padding:8px 13px;color:#b9d2ea;font-size:13px;margin-bottom:20px}
+.dot{width:7px;height:7px;border-radius:50%;background:var(--accent);box-shadow:0 0 12px var(--accent)}
+h1{font-size:clamp(44px,6vw,76px);line-height:1.02;letter-spacing:-3px;margin-bottom:22px}
+.gradient{background:linear-gradient(100deg,var(--accent),var(--accent2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{font-size:18px;color:var(--muted);max-width:650px}
+.buttons{display:flex;gap:13px;margin-top:30px;flex-wrap:wrap}
+.btn{padding:12px 18px;border-radius:10px;border:1px solid var(--line);font-weight:600;font-size:14px}
+.primary{background:var(--accent);color:#04121c;border-color:var(--accent)}
+.secondary{background:#0c1b2c}.btn:hover{transform:translateY(-2px)}
+.dashboard{background:linear-gradient(145deg,#10243b,#091525);border:1px solid #23415d;border-radius:20px;padding:18px;box-shadow:0 25px 70px rgba(0,0,0,.35)}
+.dtop{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px;color:#bcd0e4;font-size:12px}
+.kpis{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.kpi{background:#0b192a;border:1px solid #1c334c;padding:15px;border-radius:12px}.kpi small{color:#7f96ad}.kpi strong{display:block;font-size:24px;margin-top:4px}
+.chart{height:180px;margin-top:12px;background:linear-gradient(180deg,rgba(85,214,190,.08),transparent);border:1px solid #1b334d;border-radius:12px;position:relative;overflow:hidden}
+.chart svg{width:100%;height:100%}
+section{padding:85px 0}.section-head{margin-bottom:34px}.eyebrow{color:var(--accent);font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:2px}.section-head h2{font-size:38px;letter-spacing:-1.5px;margin-top:7px}.section-head p{color:var(--muted);max-width:700px;margin-top:8px}
+.aboutgrid,.projectgrid,.skillgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.card{background:rgba(13,26,43,.78);border:1px solid var(--line);border-radius:16px;padding:24px}.card h3{font-size:18px;margin-bottom:8px}.card p{color:var(--muted);font-size:14px}
+.projectgrid{grid-template-columns:repeat(2,1fr)}
+.project{min-height:245px;position:relative;overflow:hidden}.project:before{content:"";position:absolute;width:170px;height:170px;right:-60px;top:-60px;background:var(--accent);opacity:.07;border-radius:50%}.tags{display:flex;gap:7px;flex-wrap:wrap;margin-top:18px}.tag{font-size:11px;padding:5px 8px;border-radius:6px;background:#12243a;color:#b9d2ea;border:1px solid #213a54}
+.exp{display:grid;grid-template-columns:180px 1fr;gap:30px;padding:26px 0;border-top:1px solid var(--line)}.exp:first-of-type{border-top:0}.date{color:var(--accent);font-size:13px;font-weight:700}.company{font-size:25px;font-weight:700}.role{color:#c4d4e5;margin:3px 0 12px}.exp ul{padding-left:19px;color:var(--muted);font-size:14px}.exp li{margin:7px 0}
+.skills{display:flex;flex-wrap:wrap;gap:10px}.skill{padding:10px 13px;background:#0c1b2c;border:1px solid var(--line);border-radius:9px;font-size:14px;color:#cbdced}
+.contact{background:linear-gradient(135deg,#0d2135,#0b1727);border:1px solid #203b56;border-radius:22px;padding:42px;display:flex;align-items:center;justify-content:space-between;gap:30px}.contact h2{font-size:32px}.contact p{color:var(--muted);margin-top:8px}
+footer{padding:35px 0;color:#71879e;border-top:1px solid var(--line);font-size:13px}
+@media(max-width:800px){.hero{grid-template-columns:1fr;padding:60px 0}.aboutgrid,.projectgrid,.skillgrid{grid-template-columns:1fr}.navlinks{display:none}.exp{grid-template-columns:1fr;gap:8px}.contact{flex-direction:column;align-items:flex-start}h1{letter-spacing:-2px}}
+</style>
+</head>
+<body>
+<nav><div class="container nav">
+<div class="logo">Sami<span>.</span></div>
+<div class="navlinks"><a href="#about">About</a><a href="#experience">Experience</a><a href="#projects">Projects</a><a href="#skills">Skills</a><a href="#contact">Contact</a></div>
+</div></nav>
+
+<main>
+<section class="hero">
+<div class="container" style="display:contents">
+<div>
+<div class="badge"><span class="dot"></span> MIS Analyst → Data Analyst</div>
+<h1>Turning operational data into <span class="gradient">business decisions.</span></h1>
+<p>I’m Sami Mohammed, an MIS Analyst focused on fleet operations, reporting automation, performance analytics and interactive dashboards using SQL, Power BI and Excel.</p>
+<div class="buttons">
+<a class="btn primary" href="#projects">View my work</a>
+<a class="btn secondary" href="#contact">Let's connect</a>
+</div>
+</div>
+<div class="dashboard">
+<div class="dtop"><span>FLEET PERFORMANCE</span><span>LIVE ANALYTICS</span></div>
+<div class="kpis">
+<div class="kpi"><small>Vehicle Utility</small><strong>↑ KPI</strong></div>
+<div class="kpi"><small>Trips</small><strong>↑ Trend</strong></div>
+<div class="kpi"><small>Revenue</small><strong>₹ Growth</strong></div>
+<div class="kpi"><small>Collection</small><strong>On Track</strong></div>
+</div>
+<div class="chart">
+<svg viewBox="0 0 500 180" preserveAspectRatio="none">
+<polyline points="0,140 55,128 105,145 155,95 205,112 260,70 315,88 365,45 420,62 500,25" fill="none" stroke="#55d6be" stroke-width="4"/>
+<polyline points="0,155 55,151 105,158 155,135 205,142 260,118 315,125 365,96 420,110 500,90" fill="none" stroke="#5ea7ff" stroke-width="2" opacity=".75"/>
+</svg>
+</div>
+</div>
+</div>
+</section>
+
+<section id="about"><div class="container">
+<div class="section-head"><div class="eyebrow">About me</div><h2>Operations knowledge + analytics.</h2><p>My work sits at the intersection of business operations and data. I work with operational datasets to identify performance gaps, automate recurring reports and build dashboards that make information easier to act on.</p></div>
+<div class="aboutgrid">
+<div class="card"><h3>Fleet Analytics</h3><p>Vehicle allocation, inward/outward movement, utility, driver performance, trips and operational tracking.</p></div>
+<div class="card"><h3>Reporting & MIS</h3><p>Daily/weekly/monthly reporting, KPI tracking, reconciliation and converting raw operational data into management-ready insights.</p></div>
+<div class="card"><h3>Automation</h3><p>Reducing repetitive manual reporting through Excel, SQL, Power BI and Python-based analytical workflows.</p></div>
+</div>
+</div></section>
+
+<section id="experience"><div class="container">
+<div class="section-head"><div class="eyebrow">Experience</div><h2>Everest Fleet</h2><p>Hands-on experience supporting fleet and business operations through data.</p></div>
+<div class="exp"><div class="date">DEC 2024 — PRESENT</div><div><div class="company">Everest Fleet Pvt. Ltd.</div><div class="role">MIS Analyst · Hyderabad</div><ul>
+<li>Managed and analyzed end-to-end vehicle and driver operational data to support business decisions.</li>
+<li>Built and maintained reports around vehicle allocation, utility, trips, revenue and payment collections.</li>
+<li>Worked with recruitment and telecalling data, including agent calls, conversions, allocation and performance tracking.</li>
+<li>Analyzed Uber-related trip, incentive, driver earnings and performance data.</li>
+<li>Tracked vehicle inward/outward movement, garage operations, fleet allocation and deallocation.</li>
+<li>Developed interactive Power BI dashboards and improved recurring reporting through automation.</li>
+</ul></div></div>
+</div></section>
+
+<section id="projects"><div class="container">
+<div class="section-head"><div class="eyebrow">Featured projects</div><h2>What I build with data.</h2><p>Portfolio projects that demonstrate practical MIS, SQL and BI capabilities.</p></div>
+<div class="projectgrid">
+<div class="card project"><h3>Everest Fleet Performance Dashboard</h3><p>Interactive Power BI dashboard for fleet utility, vehicle availability, trips, revenue, collections and operational KPIs.</p><div class="tags"><span class="tag">Power BI</span><span class="tag">DAX</span><span class="tag">Excel</span><span class="tag">KPI Design</span></div></div>
+<div class="card project"><h3>Fleet Operations SQL Analytics</h3><p>Advanced SQL analysis covering driver performance, trip trends, vehicle utilization, earnings, incentives and operational exceptions.</p><div class="tags"><span class="tag">PostgreSQL</span><span class="tag">SQL</span><span class="tag">CTE</span><span class="tag">Window Functions</span></div></div>
+<div class="card project"><h3>Recruitment & Agent Performance</h3><p>Reporting framework for agent calls, conversions, allocation and performance to identify productivity trends and gaps.</p><div class="tags"><span class="tag">Excel</span><span class="tag">Power BI</span><span class="tag">MIS</span></div></div>
+<div class="card project"><h3>Driver Earnings & Incentive Analysis</h3><p>Analytical model connecting trips, earnings and incentives to understand driver performance and operational outcomes.</p><div class="tags"><span class="tag">SQL</span><span class="tag">Power BI</span><span class="tag">DAX</span></div></div>
+</div>
+</div></section>
+
+<section id="skills"><div class="container">
+<div class="section-head"><div class="eyebrow">Toolkit</div><h2>Technical skills.</h2></div>
+<div class="skills">
+<span class="skill">Power BI</span><span class="skill">DAX</span><span class="skill">SQL</span><span class="skill">PostgreSQL</span><span class="skill">MySQL</span><span class="skill">Advanced Excel</span><span class="skill">Google Sheets</span><span class="skill">Python</span><span class="skill">Data Cleaning</span><span class="skill">Data Visualization</span><span class="skill">MIS Reporting</span><span class="skill">KPI Analysis</span><span class="skill">Dashboard Automation</span>
+</div>
+</div></section>
+
+<section id="contact"><div class="container">
+<div class="contact"><div><div class="eyebrow">Contact</div><h2>Have a data problem?</h2><p>Let’s turn it into a useful dashboard, report or analytical solution.</p></div>
+<div class="buttons"><a class="btn primary" href="mohd.sami7654321@gmail.com">Email me</a><a class="btn secondary" href="https://www.linkedin.com/" target="_blank">LinkedIn</a></div></div>
+</div></section>
+</main>
+<footer><div class="container">© 2026 Sami Mohammed · MIS Analyst & Data Analyst</div></footer>
+</body>
+</html>
